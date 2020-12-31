@@ -1,0 +1,97 @@
+2020-12-29 16:45:33,809 - BasePage - INFO - Had  find the element! ,by css via value :input[placeholder="请输入用户名"] 
+2020-12-29 16:45:33,810 - BasePage - INFO - clear input_box
+2020-12-29 16:45:33,827 - BasePage - INFO - Had  find the element! ,by css via value :input[placeholder="请输入用户名"] 
+2020-12-29 16:45:33,827 - BasePage - INFO - clear input_box
+2020-12-29 16:45:33,881 - BasePage - INFO - input is：15868938712
+2020-12-29 16:45:33,892 - BasePage - INFO - Had  find the element! ,by css via value :input[placeholder="请输入密码"] 
+2020-12-29 16:45:33,892 - BasePage - INFO - clear input_box
+2020-12-29 16:45:33,915 - BasePage - INFO - input is：15868938712
+2020-12-29 16:45:33,978 - BasePage - INFO - Had  find the element! ,by css via value :input[placeholder="请输入密码"] 
+2020-12-29 16:45:33,979 - BasePage - INFO - clear input_box
+2020-12-29 16:45:34,015 - BasePage - INFO - input is：1
+2020-12-29 16:45:34,025 - BasePage - INFO - Had  find the element! ,by css via value :input[placeholder="请输入验证码"] 
+2020-12-29 16:45:34,026 - BasePage - INFO - clear input_box
+2020-12-29 16:45:34,035 - BasePage - INFO - input is：1
+2020-12-29 16:45:34,043 - BasePage - INFO - Had  find the element! ,by css via value :input[placeholder="请输入验证码"] 
+2020-12-29 16:45:34,044 - BasePage - INFO - clear input_box
+2020-12-29 16:45:34,071 - BasePage - INFO - input is：1
+2020-12-29 16:45:34,084 - BasePage - INFO - Had  find the element! ,by xpath via value ://button[@nz-wave='[object Object]'] 
+2020-12-29 16:45:34,099 - BasePage - INFO - input is：1
+2020-12-29 16:45:34,108 - BasePage - INFO - Had  find the element! ,by xpath via value ://button[@nz-wave='[object Object]'] 
+2020-12-29 16:45:34,131 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:35,203 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[@title='首页'] 
+2020-12-29 16:45:35,229 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[@title='监管智库'] 
+2020-12-29 16:45:35,299 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:35,309 - BasePage - INFO - Had  find the element! ,by xpath via value :(//span[@title='监管标签'])[1] 
+2020-12-29 16:45:35,362 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:35,374 - BasePage - INFO - Had  find the element! ,by xpath via value :(//span[@title='监管标签'])[2] 
+2020-12-29 16:45:35,451 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:36,530 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[text()='禁毒管理'] 
+2020-12-29 16:45:36,626 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:38,225 - BasePage - INFO - Sleep for 3 seconds
+2020-12-29 16:45:38,256 - BasePage - INFO - The element was clicked
+2020-12-29 16:45:39,114 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[@title='首页'] 
+2020-12-29 16:45:39,138 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[@title='监管智库'] 
+2020-12-29 16:45:39,224 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:39,286 - BasePage - INFO - Had  find the element! ,by xpath via value :(//span[@title='监管标签'])[1] 
+2020-12-29 16:45:41,078 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:41,089 - BasePage - INFO - Had  find the element! ,by xpath via value :(//span[@title='监管标签'])[2] 
+2020-12-29 16:45:41,136 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:41,641 - BasePage - INFO - Sleep for 5 seconds
+2020-12-29 16:45:41,650 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[text()='禁毒管理'] 
+2020-12-29 16:45:41,676 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:41,685 - BasePage - INFO - Had  find the element! ,by xpath via value ://button[@nz-wave='[object Object]'] 
+2020-12-29 16:45:41,769 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:41,780 - BasePage - INFO - Had  find the element! ,by xpath via value :(//input[@placeholder='请输入'])[1] 
+2020-12-29 16:45:41,781 - BasePage - INFO - clear input_box
+2020-12-29 16:45:41,868 - BasePage - INFO - input is：陈凯ui自动化新建标签
+2020-12-29 16:45:41,885 - BasePage - INFO - Had  find the element! ,by xpath via value ://input[@type='checkbox'] 
+2020-12-29 16:45:41,976 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:41,987 - BasePage - INFO - Had  find the element! ,by xpath via value :(//div[@unselectable='unselectable'])[1] 
+2020-12-29 16:45:42,067 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:42,085 - BasePage - INFO - Had  find the element! ,by xpath via value :(//li[@unselectable='unselectable'])[1] 
+2020-12-29 16:45:42,130 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[text()='禁毒管理'] 
+2020-12-29 16:45:42,138 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:42,150 - BasePage - INFO - Had  find the element! ,by xpath via value :(//input[@placeholder='请输入'])[2] 
+2020-12-29 16:45:42,150 - BasePage - INFO - clear input_box
+2020-12-29 16:45:42,240 - BasePage - INFO - input is：陈凯ui自动化责任处室
+2020-12-29 16:45:42,248 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:47,251 - BasePage - INFO - Sleep for 5 seconds
+2020-12-29 16:45:47,260 - BasePage - INFO - Had  find the element! ,by xpath via value ://span[text()='禁毒管理'] 
+2020-12-29 16:45:47,284 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:47,293 - BasePage - INFO - Had  find the element! ,by xpath via value ://button[@nz-wave='[object Object]'] 
+2020-12-29 16:45:47,303 - BasePage - ERROR - NoSuchElementException Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="textarea"]"}
+  (Session info: chrome=87.0.4280.88)
+ 
+2020-12-29 16:45:47,364 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:47,375 - BasePage - INFO - Had  find the element! ,by xpath via value :(//input[@placeholder='请输入'])[1] 
+2020-12-29 16:45:47,376 - BasePage - INFO - clear input_box
+2020-12-29 16:45:47,451 - BasePage - INFO - input is：陈凯ui自动化新建标签
+2020-12-29 16:45:47,462 - BasePage - INFO - Had  find the element! ,by xpath via value ://input[@type='checkbox'] 
+2020-12-29 16:45:47,511 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:47,526 - BasePage - INFO - Had  find the element! ,by xpath via value :(//div[@unselectable='unselectable'])[1] 
+2020-12-29 16:45:47,555 - BasePage - INFO - clear input_box
+2020-12-29 16:45:47,555 - BasePage - ERROR - Failed to type in input box
+Traceback (most recent call last):
+  File "C:\Users\hzhb\PycharmProjects\ui_selenim1\common\base_page.py", line 114, in type
+    element.send_keys(value)
+AttributeError: 'NoneType' object has no attribute 'send_keys'
+2020-12-29 16:45:47,602 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:47,614 - BasePage - INFO - Had  find the element! ,by xpath via value :(//li[@unselectable='unselectable'])[1] 
+2020-12-29 16:45:47,663 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:47,674 - BasePage - INFO - Had  find the element! ,by xpath via value :(//input[@placeholder='请输入'])[2] 
+2020-12-29 16:45:47,674 - BasePage - INFO - clear input_box
+2020-12-29 16:45:47,744 - BasePage - INFO - input is：陈凯ui自动化责任处室
+2020-12-29 16:45:47,835 - BasePage - INFO - Had  find the element! ,by xpath via value :(//button[@nz-wave='[object Object]'])[2] 
+2020-12-29 16:45:47,885 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
+2020-12-29 16:45:52,808 - BasePage - ERROR - NoSuchElementException Message: no such element: Unable to locate element: {"method":"css selector","selector":"[name="textarea"]"}
+  (Session info: chrome=87.0.4280.88)
+ 
+2020-12-29 16:45:53,119 - BasePage - INFO - clear input_box
+2020-12-29 16:45:53,119 - BasePage - ERROR - Failed to type in input box
+Traceback (most recent call last):
+  File "C:\Users\hzhb\PycharmProjects\ui_selenim1\common\base_page.py", line 114, in type
+    element.send_keys(value)
+AttributeError: 'NoneType' object has no attribute 'send_keys'
+2020-12-29 16:45:53,440 - BasePage - INFO - Had  find the element! ,by xpath via value :(//button[@nz-wave='[object Object]'])[2] 
+2020-12-29 16:45:53,487 - BasePage - INFO - "The element ' %s ' was clicked." % element.text
