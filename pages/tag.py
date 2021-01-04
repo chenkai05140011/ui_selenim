@@ -18,6 +18,9 @@ class Org_Entity(BasePage):
     loc_13 = ("name", "textarea")
 # 缺少自动标签部分
     loc_14 = ("xpath", "(//button[@nz-wave='[object Object]'])[2]")
+    loc_17 = ("css", ".ant-message span")
+    loc_15 = ("xpath", "//span[text()='陈凯一直自动标签 (1级) ']")
+    loc_16 = ("xpath", "(//button[@nz-wave='[object Object]'])[3]")
 
     def click_tag(self):
         self.click(self.loc_1)
@@ -37,6 +40,13 @@ class Org_Entity(BasePage):
         self.type(self.loc_12, department)
         self.type(self.loc_13, remarks)
         self.click(self.loc_14)
+        text = self.get_text(self.loc_17)
+        return text
+
+    def update_status_tag(self):
+        self.click(self.loc_1)
+        self.click(self.loc_2)
+        self.click(self.loc_3)
 
 
 if __name__ == '__main__':

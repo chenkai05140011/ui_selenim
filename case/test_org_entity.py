@@ -20,7 +20,8 @@ class Test_Tag():
         driver = login_cf
         web = Org_Entity(driver)
         web.click_tag()
-        web.add_tag()
+        text = web.add_tag()
+        assert text == "标签添加成功"
 
 
 

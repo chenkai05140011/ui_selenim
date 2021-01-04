@@ -222,6 +222,19 @@ class BasePage:
         """弹窗 alert——取消"""
         self.driver.switch_to.alert.dismiss()
 
+    def accept_alert(self):
+        """弹窗 alert——确定"""
+        self.driver.switch_to.alert.accept()
+
+    def text_alert(self):
+        """弹窗 alert——获取文本"""
+        self.driver.switch_to.alert.text()
+
+    def default_content_alert(self):
+        """弹窗 alert——切换回默认页面"""
+        self.driver.switch_to.alert.default_content()
+
+
     def clear(self, selector):
         """清除文本框"""
         element = self.find_element(selector)
