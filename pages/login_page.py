@@ -50,7 +50,6 @@ if __name__ == '__main__':
     web.wait(3)
     result = web.is_login_success()
     web.quit()
-    assert result == True
 
 
 

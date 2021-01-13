@@ -1,7 +1,7 @@
 import time
 from common.base_page import BasePage
 
-class Org_Entity(BasePage):
+class Tag(BasePage):
     # 登入
     loc_1 = ("xpath", "//span[@title='监管智库']")
     loc_2 = ("xpath", "(//span[@title='监管标签'])[1]")
