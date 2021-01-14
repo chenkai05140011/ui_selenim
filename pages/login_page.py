@@ -33,7 +33,7 @@ class LoginPage(BasePage):
         return text == "首页"
 
     @allure.step("登录")
-    def login(self, url='http://59.202.63.108/v2/#/passport/login', username='15868938712', psw='1', yzm='1'):
+    def login(self, url='http://59.202.63.108/v2/#/passport/login', username='15868385402', psw='1', yzm='1'):
         self.open_url(url)
         self.input_user(username)
         self.input_psw(psw)

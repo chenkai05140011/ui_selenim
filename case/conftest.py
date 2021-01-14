@@ -11,7 +11,7 @@ def driver(request):
 
     def end():
         print("全部caes执行完退出游览器")
-        time.sleep(30)
+        time.sleep(5)
         _driver.quit()
     request.addfinalizer(end)
     return _driver
@@ -20,6 +20,4 @@ def driver(request):
 def login_cf(driver):
     web = LoginPage(driver)
     web.login()
-    result = web.is_login_success()
-    assert result
     return driver
