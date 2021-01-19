@@ -44,6 +44,10 @@ class ZF_People(BasePage):
     loc_32 = ("css", ".ant-modal-footer .ant-btn-default")  # 添加执法证 取消
     loc_33 = ("css", ".ant-message span")  # 验证是否添加成功
 
+    loc_list_more = ("css", ".table-handle button")  # 列表更多
+    loc_list_del = ("link", "删除")  # 删除
+    loc_list_del_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 确定删除
+
     def click_zf_menu(self):
         self.click(self.loc_1)
         self.click(self.loc_2)
@@ -51,9 +55,9 @@ class ZF_People(BasePage):
         self.sleep(5)
 
 
-    def add_zf_people(self, Phone="13186977800", search="测试岗位类别", zfCertNo="陈凯ui自动化zfCertNo", certType="陈凯ui自动化certType",zfArea="陈凯ui自动化zfArea"):
+    def add_zf_people(self, phone="13186977800", search="测试岗位类别", zfCertNo="陈凯ui自动化zfCertNo", certType="陈凯ui自动化certType",zfArea="陈凯ui自动化zfArea"):
         self.click(self.loc_5)
-        self.type(self.loc_11, Phone)
+        self.type(self.loc_11, phone)
         self.click(self.loc_11_1)
         self.click(self.loc_12)
         self.click(self.loc_15)
@@ -79,6 +83,15 @@ class ZF_People(BasePage):
         text1 = self.get_text(self.loc_9_1)
         return text1
 
+    def del_fz_people(self, phone='13186977800'):
+        self.clear(self.loc_10)
+        self.type(self.loc_10, phone)
+        self.click(self.loc_6)
+        test = self.get_text(self.loc_list_more)
+        print("daasdfasdfsdf--------%s------" % test)
+        self.move_to_element(self.loc_list_more)
+        self.click(self.loc_list_del)
+        self.click(self.loc_list_del_y)
 
 
 if __name__ == '__main__':
