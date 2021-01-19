@@ -8,8 +8,8 @@ class LoginPage(BasePage):
     loc_1 = ("css", 'input[placeholder="请输入用户名"]')
     loc_2 = ("css", 'input[placeholder="请输入密码"]')
     loc_3 = ("css", 'input[placeholder="请输入验证码"]')
-    loc_4 = ("xpath", "//button[@nz-wave='[object Object]']")
-    loc_5 = ("xpath", "//span[@title='首页']")
+    loc_4 = ("css", "button[type=submit]")
+    loc_5 = ("css", "span[title=首页]")
 
     @allure.step("输入用户名")
     def input_user(self, username):
@@ -30,6 +30,7 @@ class LoginPage(BasePage):
     @allure.step("验证是否登入成功")
     def is_login_success(self):
         text = self.get_text(self.loc_5)
+        print(text)
         return text == "首页"
 
     @allure.step("登录")

@@ -2,9 +2,18 @@ from selenium import webdriver
 import pytest
 import time
 from pages.login_page import LoginPage
-
+from selenium.webdriver.chrome.options import Options
 @pytest.fixture(scope="session")
 def driver(request):
+    # # linux启动
+    # chrome_options = Options()
+    # chrome_options.add_argument('--window-size=1920,1080')  # 设置当前窗口的宽度和高度
+    # chrome_options.add_argument('--headless')  # 无界面
+    # chrome_options.add_argument('--no-sandbox')  # 解决devtoolsactiveport文件不存在报错
+    # chrome_options.add_argument('--disable-dev-shm-usage')
+    # chrome_options.add_argument('--disable-gpu')  # 禁用gpu硬件加速
+    # _driver = webdriver.Chrome(chrome_options=chrome_options)
+    # window启动
     _driver = webdriver.Chrome()
     _driver.implicitly_wait(5)
     _driver.maximize_window()
@@ -20,4 +29,6 @@ def driver(request):
 def login_cf(driver):
     web = LoginPage(driver)
     web.login()
+    time.sleep(3)
+    assert web.is_login_success()
     return driver

@@ -7,19 +7,22 @@ class ZF_People(BasePage):
     loc_2 = ("css", "span[title=执法人员]")
     loc_3 = ("css", "span[title=执法人员库]")
     loc_4 = ("css", "span[title=岗位类别管理]")
-    loc_5 = ("css", ".operate button")   # 添加人员按钮
-    loc_6 = ("css", ".search-area button:nth(0)")  # 查询
+
+    loc_6 = ("xpath", "(//button[@nz-wave='[object Object]'])[1]")  # 查询
     loc_7 = ("css", ".search-area button:nth(1)")  # 重置
     loc_8 = ("css", ".search-area button:nth(2)")  # 更多
     loc_9 = ("css", "input[placeholder=请输入用户名查询]")
+    loc_9_1 = ("xpath", "//td[text()='陈凯']")
     loc_10 = ("css", "input[placeholder=请输入手机号]")
     # 缺少其他查询条件细节处以后补上
+
+    # 添加人员元素
+    loc_5 = ("css", ".operate button")  # 添加人员按钮
     loc_11 = ("css", "input[placeholder=请输入手机号查询]")  # 添加人员输入手机号
     loc_11_1 = ("css", ".ant-breadcrumb")# 添加人员输入手机号-确认
     loc_12 = ("css", "[nzplaceholder=请选择人员类别]")  # 人员类别
     loc_13 = ("css", "[nzplaceholder=请选择学历]")  # 学历
     loc_14 = ("css", "[nzplaceholder=请选择执法状态] ")  # 是否日常执法
-
     loc_15 = ("xpath", "(//li[@unselectable='unselectable'])[2]")  # 选择执法人员
     loc_16 = ("css", ".ant-select-dropdown-menu-vertical li:nth(2)")  # 选择辅助人员
     loc_17 = ("xpath", "(//li[@unselectable='unselectable'])[2]")  # 是
@@ -29,12 +32,13 @@ class ZF_People(BasePage):
     loc_21 = ("css", ".ng-star-inserted .ant-tree-checkbox-inner")  # 勾选岗位类别
     loc_22 = ("css", ".search-area .ant-btn-primary")  # 勾选岗位类别确认
     loc_23 = ("css", ".ng-tns-c13-1194 li:nth(2)")  # 勾选岗位类别取消
+    #添加执法证
     loc_24 = ("css", ".operate button")  # 添加执法证
     loc_25 = ("css", ".back-wrapper [nztype=default]")  # 返回
     loc_26 = ("css", ".back-wrapper [nztype=primary]")  # 保存
     loc_27 = ("css", "[formcontrolname=zfCertNo]")  # 执法证编号
-    loc_28 = ("css", "formcontrolname=certType")  # 执法类别
-    loc_29 = ("css", "formcontrolname=zfArea")  # 执法区域
+    loc_28 = ("css", "[formcontrolname=certType]")  # 执法类别
+    loc_29 = ("css", "[formcontrolname=zfArea]")  # 执法区域
     loc_30 = ("css", ".ant-checkbox")  # 有效期 长期有效
     loc_31 = ("css", ".ant-modal-footer .ant-btn-primary")  # 添加执法证 确定
     loc_32 = ("css", ".ant-modal-footer .ant-btn-default")  # 添加执法证 取消
@@ -47,7 +51,7 @@ class ZF_People(BasePage):
         self.sleep(5)
 
 
-    def add_zfpeople(self, Phone="13186977800", search="测试岗位类别", zfCertNo="陈凯ui自动化zfCertNo", certType="陈凯ui自动化certType",zfArea="陈凯ui自动化zfArea"):
+    def add_zf_people(self, Phone="13186977800", search="测试岗位类别", zfCertNo="陈凯ui自动化zfCertNo", certType="陈凯ui自动化certType",zfArea="陈凯ui自动化zfArea"):
         self.click(self.loc_5)
         self.type(self.loc_11, Phone)
         self.click(self.loc_11_1)
@@ -69,8 +73,12 @@ class ZF_People(BasePage):
         text = self.get_text(self.loc_33)
         return text
 
-    def update_status_tag(self):
-        pass
+    def search_fz_people(self, name='陈凯'):
+        self.type(self.loc_9, name)
+        self.click(self.loc_6)
+        text1 = self.get_text(self.loc_9_1)
+        return text1
+
 
 
 if __name__ == '__main__':
