@@ -47,6 +47,14 @@ class ZF_People(BasePage):
     loc_list_more = ("css", ".table-handle button")  # 列表更多
     loc_list_del = ("link", "删除")  # 删除
     loc_list_del_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 确定删除
+    loc_list_edit = ("css", ".table-handle a:nth-child(1)")  # 编辑
+    loc_list_edit_zf_del = ("css", ".ant-table-td-right-sticky .ng-star-inserted")  # 删除执法证
+    loc_list_edit_zf_del_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 删除执法证确定
+    loc_list_disabled = ("css", ".table-handle a:nth-child(2)")  # 禁用
+    loc_list_disabled_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 确定禁用
+
+
+
 
     def click_zf_menu(self):
         self.click(self.loc_1)
@@ -78,21 +86,48 @@ class ZF_People(BasePage):
         return text
 
     def search_fz_people(self, name='陈凯'):
+        self.clear(self.loc_10)
         self.type(self.loc_9, name)
         self.click(self.loc_6)
-        text1 = self.get_text(self.loc_9_1)
-        return text1
+        text = self.get_text(self.loc_9_1)
+        return text
 
     def del_fz_people(self, phone='13186977800'):
         self.clear(self.loc_10)
         self.type(self.loc_10, phone)
         self.click(self.loc_6)
-        test = self.get_text(self.loc_list_more)
-        print("daasdfasdfsdf--------%s------" % test)
         self.move_to_element(self.loc_list_more)
         self.click(self.loc_list_del)
         self.click(self.loc_list_del_y)
 
+    def disabled_fz_people(self, phone='13186977800'):
+        self.clear(self.loc_10)
+        self.type(self.loc_10, phone)
+        self.click(self.loc_6)
+        self.sleep(3)
+        self.click(self.loc_list_disabled)
+        self.click(self.loc_list_edit_zf_del_y)
+        text = self.get_text(self.loc_list_disabled)
+        return text
+
+    def edit_fz_people(self, phone='13186977800', zfCertNo="编辑陈凯ui自动化zfCertNo", certType="编辑陈凯ui自动化certType",zfArea="编辑陈凯ui自动化zfArea"):
+        self.clear(self.loc_10)
+        self.type(self.loc_10, phone)
+        self.click(self.loc_6)
+        self.sleep(3)
+        self.click(self.loc_list_edit)
+        self.sleep(3)
+        self.click(self.loc_list_edit_zf_del)
+        self.click(self.loc_list_edit_zf_del_y)
+        self.click(self.loc_24)
+        self.type(self.loc_27, zfCertNo)
+        self.type(self.loc_28, certType)
+        self.type(self.loc_29, zfArea)
+        self.click(self.loc_30)
+        self.click(self.loc_31)
+        self.click(self.loc_26)
+        text = self.get_text(self.loc_33)
+        return text
 
 if __name__ == '__main__':
     from selenium import webdriver
