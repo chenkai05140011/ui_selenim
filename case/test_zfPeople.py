@@ -66,10 +66,21 @@ class Test_zfPeople():
     def test_disabled_zf_people(self, login_cf):
         '''
         :param login_cf: 登录
-        1.禁用企业执法人员
+        1.禁用执法人员
         :return:
         '''
         driver = login_cf
         web = ZF_People(driver)
         web.click_zf_menu()
         web.disabled_fz_people(phone='15868385402')
+
+    def test_details_zf_people(self, login_cf):
+        '''
+        :param login_cf: 登录
+        1.详情执法人员
+        :return:
+        '''
+        driver = login_cf
+        web = ZF_People(driver)
+        web.click_zf_menu()
+        web.details_fz_people(phone='15868385402')

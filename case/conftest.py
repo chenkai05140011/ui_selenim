@@ -25,7 +25,7 @@ def driver(request):
     request.addfinalizer(end)
     return _driver
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def login_cf(driver):
     web = LoginPage(driver)
     web.login()

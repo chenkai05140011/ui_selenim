@@ -48,6 +48,7 @@ class ZF_People(BasePage):
     loc_list_del = ("link", "删除")  # 删除
     loc_list_del_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 确定删除
     loc_list_edit = ("css", ".table-handle a:nth-child(1)")  # 编辑
+    loc_list_details = ("link", "详情")  # 详情
     loc_list_edit_zf_del = ("css", ".ant-table-td-right-sticky .ng-star-inserted")  # 删除执法证
     loc_list_edit_zf_del_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 删除执法证确定
     loc_list_disabled = ("css", ".table-handle a:nth-child(2)")  # 禁用
@@ -60,7 +61,6 @@ class ZF_People(BasePage):
         self.click(self.loc_1)
         self.click(self.loc_2)
         self.click(self.loc_3)
-        self.sleep(5)
 
 
     def add_zf_people(self, phone="13186977800", search="测试岗位类别", zfCertNo="陈凯ui自动化zfCertNo", certType="陈凯ui自动化certType",zfArea="陈凯ui自动化zfArea"):
@@ -128,6 +128,13 @@ class ZF_People(BasePage):
         self.click(self.loc_26)
         text = self.get_text(self.loc_33)
         return text
+
+    def details_fz_people(self, phone='13186977800'):
+        self.clear(self.loc_10)
+        self.type(self.loc_10, phone)
+        self.click(self.loc_6)
+        self.move_to_element(self.loc_list_more)
+        self.click(self.loc_list_details)
 
 if __name__ == '__main__':
     from selenium import webdriver
