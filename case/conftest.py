@@ -2,7 +2,10 @@ from selenium import webdriver
 import pytest
 import time
 from pages.login_page import LoginPage
+import allure
 from selenium.webdriver.chrome.options import Options
+
+@allure.feature("设置driver")
 @pytest.fixture(scope="session")
 def driver(request):
     # # linux启动
@@ -25,6 +28,7 @@ def driver(request):
     request.addfinalizer(end)
     return _driver
 
+@allure.feature("用户登录")
 @pytest.fixture(scope="function")
 def login_cf(driver):
     web = LoginPage(driver)

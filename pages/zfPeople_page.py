@@ -1,6 +1,8 @@
 import time
 from common.base_page import BasePage
+import allure
 
+@allure.feature("执法人员管理")
 class ZF_People(BasePage):
     # 登入
     loc_1 = ("css", "span[title=监管智库]")
@@ -47,22 +49,20 @@ class ZF_People(BasePage):
     loc_list_more = ("css", ".table-handle button")  # 列表更多
     loc_list_del = ("link", "删除")  # 删除
     loc_list_del_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 确定删除
-    loc_list_edit = ("css", ".table-handle a:nth-child(1)")  # 编辑
+    loc_list_edit = ("css", ".ant-table-tbody tr .table-handle a:nth-child(1)")  # 编辑
     loc_list_details = ("link", "详情")  # 详情
-    loc_list_edit_zf_del = ("css", ".ant-table-td-right-sticky .ng-star-inserted")  # 删除执法证
+    loc_list_edit_zf_del = ("css", ".ant-table-tbody tr .ant-table-td-right-sticky a")  # 删除执法证
     loc_list_edit_zf_del_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 删除执法证确定
     loc_list_disabled = ("css", ".table-handle a:nth-child(2)")  # 禁用
     loc_list_disabled_y = ("css", ".ant-modal-footer .ant-btn-primary")  # 确定禁用
 
-
-
-
+    @allure.step("进入执法人员菜单")
     def click_zf_menu(self):
         self.click(self.loc_1)
         self.click(self.loc_2)
         self.click(self.loc_3)
 
-
+    @allure.step("添加执法人员")
     def add_zf_people(self, phone="13186977800", search="测试岗位类别", zfCertNo="陈凯ui自动化zfCertNo", certType="陈凯ui自动化certType",zfArea="陈凯ui自动化zfArea"):
         self.click(self.loc_5)
         self.type(self.loc_11, phone)
@@ -85,6 +85,7 @@ class ZF_People(BasePage):
         text = self.get_text(self.loc_33)
         return text
 
+    @allure.step("查询执法人员")
     def search_fz_people(self, name='陈凯'):
         self.clear(self.loc_10)
         self.type(self.loc_9, name)
@@ -92,6 +93,7 @@ class ZF_People(BasePage):
         text = self.get_text(self.loc_9_1)
         return text
 
+    @allure.step("删除执法人员")
     def del_fz_people(self, phone='13186977800'):
         self.clear(self.loc_10)
         self.type(self.loc_10, phone)
@@ -100,6 +102,7 @@ class ZF_People(BasePage):
         self.click(self.loc_list_del)
         self.click(self.loc_list_del_y)
 
+    @allure.step("启用停用执法人员")
     def disabled_fz_people(self, phone='13186977800'):
         self.clear(self.loc_10)
         self.type(self.loc_10, phone)
@@ -110,25 +113,26 @@ class ZF_People(BasePage):
         text = self.get_text(self.loc_list_disabled)
         return text
 
+    @allure.step("修改执法人员")
     def edit_fz_people(self, phone='13186977800', zfCertNo="编辑陈凯ui自动化zfCertNo", certType="编辑陈凯ui自动化certType",zfArea="编辑陈凯ui自动化zfArea"):
         self.clear(self.loc_10)
         self.type(self.loc_10, phone)
         self.click(self.loc_6)
-        self.sleep(3)
+        self.sleep(2)
         self.click(self.loc_list_edit)
-        self.sleep(3)
-        self.click(self.loc_list_edit_zf_del)
-        self.click(self.loc_list_edit_zf_del_y)
         self.click(self.loc_24)
         self.type(self.loc_27, zfCertNo)
         self.type(self.loc_28, certType)
         self.type(self.loc_29, zfArea)
         self.click(self.loc_30)
         self.click(self.loc_31)
+        self.click(self.loc_list_edit_zf_del)
+        self.click(self.loc_list_edit_zf_del_y)
         self.click(self.loc_26)
         text = self.get_text(self.loc_33)
         return text
 
+    @allure.step("详情执法人员")
     def details_fz_people(self, phone='13186977800'):
         self.clear(self.loc_10)
         self.type(self.loc_10, phone)
