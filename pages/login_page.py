@@ -29,6 +29,7 @@ class LoginPage(BasePage):
 
     @allure.step("验证是否登入成功")
     def is_login_success(self):
+        self.get_img()
         text = self.get_text(self.loc_5)
         print(text)
         return text == "首页"

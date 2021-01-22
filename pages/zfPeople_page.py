@@ -82,6 +82,7 @@ class ZF_People(BasePage):
         self.click(self.loc_30)
         self.click(self.loc_31)
         self.click(self.loc_26)
+        self.get_img()
         text = self.get_text(self.loc_33)
         return text
 
@@ -90,6 +91,7 @@ class ZF_People(BasePage):
         self.clear(self.loc_10)
         self.type(self.loc_9, name)
         self.click(self.loc_6)
+        self.get_img()
         text = self.get_text(self.loc_9_1)
         return text
 
@@ -100,6 +102,7 @@ class ZF_People(BasePage):
         self.click(self.loc_6)
         self.move_to_element(self.loc_list_more)
         self.click(self.loc_list_del)
+        self.get_img()
         self.click(self.loc_list_del_y)
 
     @allure.step("启用停用执法人员")
@@ -110,6 +113,7 @@ class ZF_People(BasePage):
         self.sleep(3)
         self.click(self.loc_list_disabled)
         self.click(self.loc_list_edit_zf_del_y)
+        self.get_img()
         text = self.get_text(self.loc_list_disabled)
         return text
 
@@ -129,6 +133,7 @@ class ZF_People(BasePage):
         self.click(self.loc_list_edit_zf_del)
         self.click(self.loc_list_edit_zf_del_y)
         self.click(self.loc_26)
+        self.get_img()
         text = self.get_text(self.loc_33)
         return text
 
@@ -139,6 +144,7 @@ class ZF_People(BasePage):
         self.click(self.loc_6)
         self.move_to_element(self.loc_list_more)
         self.click(self.loc_list_details)
+        self.get_img()
 
 if __name__ == '__main__':
     from selenium import webdriver

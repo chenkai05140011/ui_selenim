@@ -40,6 +40,7 @@ class Tag(BasePage):
         self.type(self.loc_12, department)
         self.type(self.loc_13, remarks)
         self.click(self.loc_14)
+        self.get_img()
         text = self.get_text(self.loc_17)
         return text
 

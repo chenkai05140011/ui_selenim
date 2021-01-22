@@ -64,8 +64,8 @@ class Job_Manage(BasePage):
     @allure.step("启用停用岗位类别")
     def disabled_job(self):
         self.click(self.loc_disabled_job)
-        self.click(self.loc_disabled_job_y)
         self.get_img()
+        self.click(self.loc_disabled_job_y)
         text = self.get_text(self.loc_alert)
         return text
 

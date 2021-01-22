@@ -8,6 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium import webdriver
 import os
 import time
+import allure
 
 logger = Logger(logger='BasePage').getlog()
 
@@ -62,6 +63,9 @@ class BasePage:
         img_name = file_path + rq + '.png'  # 设置截图名称格式
         try:
             self.driver.get_screenshot_as_file(img_name)  # 指定截图存放路径和名称
+            with open(img_name,mode='rb') as f:
+                file = f.read()
+            allure.attach(file, '图片描述', allure.attachment_type.PNG)
             print("已将截图保存到文件夹/img/img")
         except NameError as e:
             print("截图保存失败! %s" % e)

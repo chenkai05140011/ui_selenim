@@ -3,7 +3,7 @@ import allure
 from pages.zfPeople_page import ZF_People
 
 @allure.epic("行政执法项目")
-@allure.feature("执法人员管理")
+@allure.feature("执法人员库")
 @pytest.mark.ui_test
 class Test_zfPeople():
 

@@ -1,18 +1,20 @@
+import time
+
 import pytest
 import allure
 from pages.JobManage_page import Job_Manage
 
 @allure.epic("行政执法项目")
-@allure.feature("执法人员管理")
+@allure.feature("岗位类别管理")
 @pytest.mark.ui_test
 class Test_Job_Manage():
-
+    rq = time.strftime('%Y%m%d%H%M', time.localtime(time.time()))  # 获取当前系统时间
     @allure.title("添加岗位类别")
     @allure.testcase("http://jira.icinfo.co/browse/ZJXZZF-349#")
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：添加岗位类别")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称13', 'zdh_说明13')])
+    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称'+rq, 'zdh_说明13'+rq)])
     def test_add_job(self, login_cf, name, explain):
         '''
         :param login_cf: 登录
@@ -30,7 +32,7 @@ class Test_Job_Manage():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：编辑岗位类别")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称08_编辑13', 'zdh_说明08_编辑13')])
+    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称08_编辑+rq', 'zdh_说明08_编辑+rq')])
     def test_edit_job(self, login_cf, name, explain):
         '''
         :param login_cf: 登录
