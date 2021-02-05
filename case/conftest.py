@@ -16,6 +16,11 @@ def driver(request):
     # chrome_options.add_argument('--disable-dev-shm-usage')
     # chrome_options.add_argument('--disable-gpu')  # 禁用gpu硬件加速
     # _driver = webdriver.Chrome(chrome_options=chrome_options)
+    # # 奇安信可信
+    # chrome_options = webdriver.ChromeOptions()
+    # chrome_options.binary_location = r"C:\Users\kevin\AppData\Roaming\360se6\Application\360se.exe"  # 这里是360安全浏览器的路径
+    # chrome_options.add_argument(r'--lang=zh-CN')  # 这里添加一些启动的参数
+    # _driver = webdriver.Chrome(chrome_options=chrome_options)
     # window启动
     _driver = webdriver.Chrome()
     _driver.implicitly_wait(5)
