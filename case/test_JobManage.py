@@ -14,7 +14,7 @@ class Test_Job_Manage():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：添加岗位类别")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称'+rq, 'zdh_说明13'+rq)])
+    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称'+rq, 'zdh_说明'+rq)])
     def test_add_job(self, login_cf, name, explain):
         '''
         :param login_cf: 登录
@@ -32,7 +32,7 @@ class Test_Job_Manage():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：编辑岗位类别")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称08_编辑+rq', 'zdh_说明08_编辑+rq')])
+    @pytest.mark.parametrize("name,explain", [('zdh_岗位类别名称08_编辑'+rq, 'zdh_说明08_编辑'+rq)])
     def test_edit_job(self, login_cf, name, explain):
         '''
         :param login_cf: 登录

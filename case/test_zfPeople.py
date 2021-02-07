@@ -12,7 +12,7 @@ class Test_zfPeople():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：添加执法人员")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("phone", ['13186977800', '15925990921'])
+    @pytest.mark.parametrize("phone", ['13186977800'])
     def test_add_zf_people(self, login_cf, phone):
         '''
         :param login_cf: 登录
@@ -48,7 +48,7 @@ class Test_zfPeople():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：编辑执法人员")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("phone", ['13186977800', '15925990921'])
+    @pytest.mark.parametrize("phone", ['13186977800'])
     def test_edit_zf_people(self, login_cf, phone):
         '''
         :param login_cf: 登录
@@ -66,7 +66,7 @@ class Test_zfPeople():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：禁用启用执法人员")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("phone", ['13186977800', '15925990921'])
+    @pytest.mark.parametrize("phone", ['13186977800'])
     def test_disabled_zf_people(self, login_cf,phone):
         '''
         :param login_cf: 登录
@@ -83,7 +83,7 @@ class Test_zfPeople():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：添加执法人员")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("phone", ['13186977800', '15925990921'])
+    @pytest.mark.parametrize("phone", ['13186977800'])
     def test_details_zf_people(self, login_cf, phone):
         '''
         :param login_cf: 登录
@@ -101,7 +101,7 @@ class Test_zfPeople():
     @allure.issue("http://jira.icinfo.co/browse/ZJXZZF-315")
     @allure.description("case描述：删除执法人员")
     @allure.severity("blocker")
-    @pytest.mark.parametrize("phone", ['13186977800', '15925990921'])
+    @pytest.mark.parametrize("phone", ['13186977800'])
     def test_del_zf_people(self, login_cf, phone):
         '''
         :param login_cf: 登录
