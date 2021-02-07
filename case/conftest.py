@@ -9,9 +9,9 @@ from selenium.webdriver.chrome.options import Options
 @pytest.fixture(scope="session")
 def driver(request):
     # # linux启动
-    # chrome_options = Options()
-    # chrome_options.add_argument('--window-size=1920,1080')  # 设置当前窗口的宽度和高度
-    # chrome_options.add_argument('--headless')  # 无界面
+    chrome_options = Options()
+    chrome_options.add_argument('--window-size=1920,1080')  # 设置当前窗口的宽度和高度
+    chrome_options.add_argument('--headless')  # 无界面
     # chrome_options.add_argument('--no-sandbox')  # 解决devtoolsactiveport文件不存在报错
     # chrome_options.add_argument('--disable-dev-shm-usage')
     # chrome_options.add_argument('--disable-gpu')  # 禁用gpu硬件加速
@@ -20,9 +20,9 @@ def driver(request):
     # chrome_options = webdriver.ChromeOptions()
     # chrome_options.binary_location = r"C:\Users\kevin\AppData\Roaming\360se6\Application\360se.exe"  # 这里是360安全浏览器的路径
     # chrome_options.add_argument(r'--lang=zh-CN')  # 这里添加一些启动的参数
-    # _driver = webdriver.Chrome(chrome_options=chrome_options)
+    _driver = webdriver.Chrome(chrome_options=chrome_options)
     # window启动
-    _driver = webdriver.Chrome()
+    # _driver = webdriver.Chrome()
     _driver.implicitly_wait(5)
     _driver.maximize_window()
 
